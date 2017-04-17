@@ -1,0 +1,1339 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/mcollina/steed#readme">steed (v1.1.3)</a>
+</h1>
+<h4>horsepower for your modules</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.steed">module steed</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.steed.steed">
+            function <span class="apidocSignatureSpan"></span>steed
+            <span class="apidocSignatureSpan">(context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.steed.each">
+            function <span class="apidocSignatureSpan">steed.</span>each
+            <span class="apidocSignatureSpan">(that, array, func, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.steed.eachSeries">
+            function <span class="apidocSignatureSpan">steed.</span>eachSeries
+            <span class="apidocSignatureSpan">(that, array, func, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.steed.map">
+            function <span class="apidocSignatureSpan">steed.</span>map
+            <span class="apidocSignatureSpan">(that, array, func, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.steed.mapSeries">
+            function <span class="apidocSignatureSpan">steed.</span>mapSeries
+            <span class="apidocSignatureSpan">(that, array, func, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.steed.parallel">
+            function <span class="apidocSignatureSpan">steed.</span>parallel
+            <span class="apidocSignatureSpan">(that, funcs, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.steed.queue">
+            function <span class="apidocSignatureSpan">steed.</span>queue
+            <span class="apidocSignatureSpan">(context, worker, concurrency)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.steed.series">
+            function <span class="apidocSignatureSpan">steed.</span>series
+            <span class="apidocSignatureSpan">(that, funcs, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.steed.toString">
+            function <span class="apidocSignatureSpan">steed.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.steed.waterfall">
+            function <span class="apidocSignatureSpan">steed.</span>waterfall
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.steed.each">module steed.each</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.steed.each.each">
+            function <span class="apidocSignatureSpan">steed.</span>each
+            <span class="apidocSignatureSpan">(that, array, func, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.steed.eachSeries">module steed.eachSeries</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.steed.eachSeries.eachSeries">
+            function <span class="apidocSignatureSpan">steed.</span>eachSeries
+            <span class="apidocSignatureSpan">(that, array, func, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.steed.map">module steed.map</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.steed.map.map">
+            function <span class="apidocSignatureSpan">steed.</span>map
+            <span class="apidocSignatureSpan">(that, array, func, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.steed.mapSeries">module steed.mapSeries</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.steed.mapSeries.mapSeries">
+            function <span class="apidocSignatureSpan">steed.</span>mapSeries
+            <span class="apidocSignatureSpan">(that, array, func, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.steed.parallel">module steed.parallel</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.steed.parallel.parallel">
+            function <span class="apidocSignatureSpan">steed.</span>parallel
+            <span class="apidocSignatureSpan">(that, funcs, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.steed.queue">module steed.queue</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.steed.queue.queue">
+            function <span class="apidocSignatureSpan">steed.</span>queue
+            <span class="apidocSignatureSpan">(context, worker, concurrency)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.steed.series">module steed.series</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.steed.series.series">
+            function <span class="apidocSignatureSpan">steed.</span>series
+            <span class="apidocSignatureSpan">(that, funcs, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.steed.toString">module steed.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.steed.toString.toString">
+            function <span class="apidocSignatureSpan">steed.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.steed.waterfall">module steed.waterfall</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.steed.waterfall.waterfall">
+            function <span class="apidocSignatureSpan">steed.</span>waterfall
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.steed" id="apidoc.module.steed">module steed</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.steed.steed" id="apidoc.element.steed.steed">
+        function <span class="apidocSignatureSpan"></span>steed
+        <span class="apidocSignatureSpan">(context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function steed(context) {
+  if (!context) {
+    context = {}
+  }
+
+  var _parNr = fastparallel(nr)
+  var _serNr = fastseries(nr)
+  var _par = fastparallel()
+  var _ser = fastseries()
+
+  context.each = each
+  context.map = map
+  context.eachSeries = eachSeries
+  context.mapSeries = mapSeries
+  context.parallel = parallel
+  context.series = series
+  context.waterfall = fastfall()
+  context.queue = fastq
+
+  return context
+
+  function each (that, array, func, cb) {
+    if (!func || typeof func === 'function' &amp;&amp; typeof array === 'function') {
+      cb = func
+      func = array
+      array = that
+      that = null
+    }
+    _parNr(that, func, array, cb)
+  }
+
+  function eachSeries (that, array, func, cb) {
+    if (!func || typeof func === 'function' &amp;&amp; typeof array === 'function') {
+      cb = func
+      func = array
+      array = that
+      that = null
+    }
+    _serNr(that, func, array, cb)
+  }
+
+  function map (that, array, func, cb) {
+    if (!func || typeof func === 'function' &amp;&amp; typeof array === 'function') {
+      cb = func
+      func = array
+      array = that
+      that = null
+    }
+    _par(that, func, array, cb)
+  }
+
+  function mapSeries (that, array, func, cb) {
+    if (!func || typeof func === 'function' &amp;&amp; typeof array === 'function') {
+      cb = func
+      func = array
+      array = that
+      that = null
+    }
+    _ser(that, func, array, cb)
+  }
+
+  function parallel (that, funcs, cb) {
+    if (!funcs || typeof funcs === 'function') {
+      cb = funcs
+      funcs = that
+      that = null
+    }
+    if (Array.isArray(funcs)) {
+      _par(that, funcs, null, cb)
+    } else {
+      _handleObjectMap(that, _par, funcs, cb)
+    }
+  }
+
+  function series (that, funcs, cb) {
+    if (!funcs || typeof funcs === 'function') {
+      cb = funcs
+      funcs = that
+      that = null
+    }
+    if (Array.isArray(funcs)) {
+      _ser(that, funcs, null, cb)
+    } else {
+      _handleObjectMap(that, _ser, funcs, cb)
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.steed.each" id="apidoc.element.steed.each">
+        function <span class="apidocSignatureSpan">steed.</span>each
+        <span class="apidocSignatureSpan">(that, array, func, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function each(that, array, func, cb) {
+  if (!func || typeof func === 'function' &amp;&amp; typeof array === 'function') {
+    cb = func
+    func = array
+    array = that
+    that = null
+  }
+  _parNr(that, func, array, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `fastfall`: 452ms
+
+These benchmarks where taken on node v4.2.2, on a MacBook
+Pro Retina Mid 2014 (i7, 16GB of RAM).
+
+-------------------------------------------------------
+&lt;a name="each"&gt;&lt;/a&gt;
+### steed.<span class="apidocCodeKeywordSpan">each</span>([that,] array, iterator(item, cb), [, done()])
+
+Iterate over all elements of the given array asynchronosly and in
+parallel.
+Calls `iterator` with an item and a callback. Calls `done` when all have
+been processed.
+
+The `that` argument will set `this` for each task and `done` callback.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.steed.eachSeries" id="apidoc.element.steed.eachSeries">
+        function <span class="apidocSignatureSpan">steed.</span>eachSeries
+        <span class="apidocSignatureSpan">(that, array, func, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function eachSeries(that, array, func, cb) {
+  if (!func || typeof func === 'function' &amp;&amp; typeof array === 'function') {
+    cb = func
+    func = array
+    array = that
+    that = null
+  }
+  _serNr(that, func, array, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `fastparallel` each: 1941ms
+
+These benchmarks where taken on node v4.2.2, on a MacBook
+Pro Retina Mid 2014 (i7, 16GB of RAM).
+
+-------------------------------------------------------
+&lt;a name="eachSeries"&gt;&lt;/a&gt;
+### steed.<span class="apidocCodeKeywordSpan">eachSeries</span>([that,] array, iterator(item, cb), [, done(err)])
+
+Iterate over all elements of the given array asynchronously and in
+series.
+Calls `iterator` with an item and a callback. Calls `done` when all have
+been processed.
+
+The `that` argument will set `this` for each task and `done` callback.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.steed.map" id="apidoc.element.steed.map">
+        function <span class="apidocSignatureSpan">steed.</span>map
+        <span class="apidocSignatureSpan">(that, array, func, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function map(that, array, func, cb) {
+  if (!func || typeof func === 'function' &amp;&amp; typeof array === 'function') {
+    cb = func
+    func = array
+    array = that
+    that = null
+  }
+  _par(that, func, array, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `fastseries` each: 4168ms
+
+These benchmarks where taken on node v4.2.2, on a MacBook
+Pro Retina Mid 2014 (i7, 16GB of RAM).
+
+-------------------------------------------------------
+&lt;a name="map"&gt;&lt;/a&gt;
+### steed.<span class="apidocCodeKeywordSpan">map</span>([that,]Â&nbsp;array, iterator(item, cb), [, done(err, results)])
+
+Performs a map operation over all elements of the given array asynchronously and in
+parallel. The result is an a array where all items have been replaced by
+the result of `iterator`.
+
+The `that` argument will set `this` for each task and `done` callback.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.steed.mapSeries" id="apidoc.element.steed.mapSeries">
+        function <span class="apidocSignatureSpan">steed.</span>mapSeries
+        <span class="apidocSignatureSpan">(that, array, func, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mapSeries(that, array, func, cb) {
+  if (!func || typeof func === 'function' &amp;&amp; typeof array === 'function') {
+    cb = func
+    func = array
+    array = that
+    that = null
+  }
+  _ser(that, func, array, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `fastparallel` map: 2102ms
+
+These benchmarks where taken on node v4.2.2, on a MacBook
+Pro Retina Mid 2014 (i7, 16GB of RAM).
+
+-------------------------------------------------------
+&lt;a name="mapSeries"&gt;&lt;/a&gt;
+### steed.<span class="apidocCodeKeywordSpan">mapSeries</span>([that,] array, iterator(item, cb), [, done(err, results)])
+
+Performs a map operation over all elements of the given array asynchronosly and in
+series. The result is an a array where all items have been replaced by
+the result of `iterator`.
+
+Calls `iterator` with an item and a callback. Calls `done` when all have
+been processed.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.steed.parallel" id="apidoc.element.steed.parallel">
+        function <span class="apidocSignatureSpan">steed.</span>parallel
+        <span class="apidocSignatureSpan">(that, funcs, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parallel(that, funcs, cb) {
+  if (!funcs || typeof funcs === 'function') {
+    cb = funcs
+    funcs = that
+    that = null
+  }
+  if (Array.isArray(funcs)) {
+    _par(that, funcs, null, cb)
+  } else {
+    _handleObjectMap(that, _par, funcs, cb)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Build an instance of steed, this step is not needed but welcomed for
+greater performance. Each steed utility likes being used for the same
+purpose.
+
+-------------------------------------------------------
+&lt;a name="parallel"&gt;&lt;/a&gt;
+### steed.<span class="apidocCodeKeywordSpan">parallel</span>([that,] tasks[, done(err, results)])
+
+Executes a series of tasks in parallel.
+
+`tasks` can either be an array of functions, or an object where each
+property is a function. `done` will be called with the results.
+The `that` argument will set `this` for each task and `done` callback.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.steed.queue" id="apidoc.element.steed.queue">
+        function <span class="apidocSignatureSpan">steed.</span>queue
+        <span class="apidocSignatureSpan">(context, worker, concurrency)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fastqueue(context, worker, concurrency) {
+  if (typeof context === 'function') {
+    concurrency = worker
+    worker = context
+    context = null
+  }
+
+  var cache = reusify(Task)
+  var queueHead = null
+  var queueTail = null
+  var _running = 0
+
+  var self = {
+    push: push,
+    drain: noop,
+    saturated: noop,
+    pause: pause,
+    paused: false,
+    concurrency: concurrency,
+    running: running,
+    resume: resume,
+    idle: idle,
+    length: length,
+    unshift: unshift,
+    empty: noop,
+    kill: kill,
+    killAndDrain: killAndDrain
+  }
+
+  return self
+
+  function running () {
+    return _running
+  }
+
+  function pause () {
+    self.paused = true
+  }
+
+  function length () {
+    var current = queueHead
+    var counter = 0
+
+    while (current) {
+      current = current.next
+      counter++
+    }
+
+    return counter
+  }
+
+  function resume () {
+    if (!self.paused) return
+    self.paused = false
+    for (var i = 0; i &lt; self.concurrency; i++) {
+      _running++
+      release()
+    }
+  }
+
+  function idle () {
+    return _running === 0 &amp;&amp; self.length() === 0
+  }
+
+  function push (value, done) {
+    var current = cache.get()
+
+    current.context = context
+    current.release = release
+    current.value = value
+    current.callback = done || noop
+
+    if (_running === self.concurrency || self.paused) {
+      if (queueTail) {
+        queueTail.next = current
+        queueTail = current
+      } else {
+        queueHead = current
+        queueTail = current
+        self.saturated()
+      }
+    } else {
+      _running++
+      worker.call(context, current.value, current.worked)
+    }
+  }
+
+  function unshift (value, done) {
+    var current = cache.get()
+
+    current.context = context
+    current.release = release
+    current.value = value
+    current.callback = done || noop
+
+    if (_running === self.concurrency || self.paused) {
+      if (queueHead) {
+        current.next = queueHead
+        queueHead = current
+      } else {
+        queueHead = current
+        queueTail = current
+        self.saturated()
+      }
+    } else {
+      _running++
+      worker.call(context, current.value, current.worked)
+    }
+  }
+
+  function release (holder) {
+    if (holder) {
+      cache.release(holder)
+    }
+    var next = queueHead
+    if (next) {
+      if (!self.paused) {
+        if (queueTail === queueHead) {
+          queueTail = null
+        }
+        queueHead = next.next
+        next.next = null
+        worker.call(context, next.value, next.worked)
+        if (queueTail === null) {
+          self.empty()
+        }
+      } else {
+        _running--
+      }
+    } else if (--_running === 0) {
+      self.drain()
+    }
+  }
+
+  function kill () {
+    queueHead = null
+    queueTail = null
+    self.drain = noop
+  }
+
+  function killAndDrain () {
+    queueHead = null
+    queueTail = null
+    self.drain()
+    self.drain = noop
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `fastseries` map: 4032ms
+
+These benchmarks where taken on node v4.2.2, on a MacBook
+Pro Retina Mid 2014 (i7, 16GB of RAM).
+
+-------------------------------------------------------
+&lt;a name="queue"&gt;&lt;/a&gt;
+### steed.<span class="apidocCodeKeywordSpan">queue</span>(worker, concurrency)
+
+Creates a new queue. See [fastq](http://npm.im/fastq) for full API.
+
+Arguments:
+
+* `worker`, worker function, it would be called with `that` as `this`,
+if that is specified.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.steed.series" id="apidoc.element.steed.series">
+        function <span class="apidocSignatureSpan">steed.</span>series
+        <span class="apidocSignatureSpan">(that, funcs, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function series(that, funcs, cb) {
+  if (!funcs || typeof funcs === 'function') {
+    cb = funcs
+    funcs = that
+    that = null
+  }
+  if (Array.isArray(funcs)) {
+    _ser(that, funcs, null, cb)
+  } else {
+    _handleObjectMap(that, _ser, funcs, cb)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `fastparallel` with results: 2139ms
+
+These benchmarks where taken on node v4.1.0, on a MacBook
+Pro Retina Mid 2014 (i7, 16GB of RAM).
+
+-------------------------------------------------------
+&lt;a name="series"&gt;&lt;/a&gt;
+### steed.<span class="apidocCodeKeywordSpan">series</span>([that,] tasks[, done(err, results)])
+
+Executes a series of tasks in series.
+
+`tasks` can either be an array of functions, or an object where each
+property is a function. `done` will be called with the results.
+The `that` argument will set `this` for each task and `done` callback.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.steed.toString" id="apidoc.element.steed.toString">
+        function <span class="apidocSignatureSpan">steed.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.steed.waterfall" id="apidoc.element.steed.waterfall">
+        function <span class="apidocSignatureSpan">steed.</span>waterfall
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fall() {
+  var current = queue.get()
+  current.release = release
+
+  if (arguments.length === 3) {
+    current.context = arguments[0]
+    current.list = arguments[1]
+    current.callback = arguments[2] || noop
+  } else {
+    current.context = context
+    current.list = arguments[0]
+    current.callback = arguments[1] || noop
+  }
+
+  current.work()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `fastseries` with results: 4096ms
+
+These benchmarks where taken on node v4.2.2, on a MacBook
+Pro Retina Mid 2014 (i7, 16GB of RAM).
+
+-------------------------------------------------------
+&lt;a name="waterfall"&gt;&lt;/a&gt;
+### steed.<span class="apidocCodeKeywordSpan">waterfall</span>(tasks[, done(err, ...)])
+
+Runs the functions in `tasks` in series, each passing their result to
+the next task in the array. Quits early if any of the tasks errors.
+
+Uses [fastfall](http://npm.im/fastfall).
+
+Example:
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.steed.each" id="apidoc.module.steed.each">module steed.each</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.steed.each.each" id="apidoc.element.steed.each.each">
+        function <span class="apidocSignatureSpan">steed.</span>each
+        <span class="apidocSignatureSpan">(that, array, func, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function each(that, array, func, cb) {
+  if (!func || typeof func === 'function' &amp;&amp; typeof array === 'function') {
+    cb = func
+    func = array
+    array = that
+    that = null
+  }
+  _parNr(that, func, array, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `fastfall`: 452ms
+
+These benchmarks where taken on node v4.2.2, on a MacBook
+Pro Retina Mid 2014 (i7, 16GB of RAM).
+
+-------------------------------------------------------
+&lt;a name="each"&gt;&lt;/a&gt;
+### steed.<span class="apidocCodeKeywordSpan">each</span>([that,] array, iterator(item, cb), [, done()])
+
+Iterate over all elements of the given array asynchronosly and in
+parallel.
+Calls `iterator` with an item and a callback. Calls `done` when all have
+been processed.
+
+The `that` argument will set `this` for each task and `done` callback.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.steed.eachSeries" id="apidoc.module.steed.eachSeries">module steed.eachSeries</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.steed.eachSeries.eachSeries" id="apidoc.element.steed.eachSeries.eachSeries">
+        function <span class="apidocSignatureSpan">steed.</span>eachSeries
+        <span class="apidocSignatureSpan">(that, array, func, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function eachSeries(that, array, func, cb) {
+  if (!func || typeof func === 'function' &amp;&amp; typeof array === 'function') {
+    cb = func
+    func = array
+    array = that
+    that = null
+  }
+  _serNr(that, func, array, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `fastparallel` each: 1941ms
+
+These benchmarks where taken on node v4.2.2, on a MacBook
+Pro Retina Mid 2014 (i7, 16GB of RAM).
+
+-------------------------------------------------------
+&lt;a name="eachSeries"&gt;&lt;/a&gt;
+### steed.<span class="apidocCodeKeywordSpan">eachSeries</span>([that,] array, iterator(item, cb), [, done(err)])
+
+Iterate over all elements of the given array asynchronously and in
+series.
+Calls `iterator` with an item and a callback. Calls `done` when all have
+been processed.
+
+The `that` argument will set `this` for each task and `done` callback.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.steed.map" id="apidoc.module.steed.map">module steed.map</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.steed.map.map" id="apidoc.element.steed.map.map">
+        function <span class="apidocSignatureSpan">steed.</span>map
+        <span class="apidocSignatureSpan">(that, array, func, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function map(that, array, func, cb) {
+  if (!func || typeof func === 'function' &amp;&amp; typeof array === 'function') {
+    cb = func
+    func = array
+    array = that
+    that = null
+  }
+  _par(that, func, array, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `fastseries` each: 4168ms
+
+These benchmarks where taken on node v4.2.2, on a MacBook
+Pro Retina Mid 2014 (i7, 16GB of RAM).
+
+-------------------------------------------------------
+&lt;a name="map"&gt;&lt;/a&gt;
+### steed.<span class="apidocCodeKeywordSpan">map</span>([that,]Â&nbsp;array, iterator(item, cb), [, done(err, results)])
+
+Performs a map operation over all elements of the given array asynchronously and in
+parallel. The result is an a array where all items have been replaced by
+the result of `iterator`.
+
+The `that` argument will set `this` for each task and `done` callback.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.steed.mapSeries" id="apidoc.module.steed.mapSeries">module steed.mapSeries</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.steed.mapSeries.mapSeries" id="apidoc.element.steed.mapSeries.mapSeries">
+        function <span class="apidocSignatureSpan">steed.</span>mapSeries
+        <span class="apidocSignatureSpan">(that, array, func, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function mapSeries(that, array, func, cb) {
+  if (!func || typeof func === 'function' &amp;&amp; typeof array === 'function') {
+    cb = func
+    func = array
+    array = that
+    that = null
+  }
+  _ser(that, func, array, cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `fastparallel` map: 2102ms
+
+These benchmarks where taken on node v4.2.2, on a MacBook
+Pro Retina Mid 2014 (i7, 16GB of RAM).
+
+-------------------------------------------------------
+&lt;a name="mapSeries"&gt;&lt;/a&gt;
+### steed.<span class="apidocCodeKeywordSpan">mapSeries</span>([that,] array, iterator(item, cb), [, done(err, results)])
+
+Performs a map operation over all elements of the given array asynchronosly and in
+series. The result is an a array where all items have been replaced by
+the result of `iterator`.
+
+Calls `iterator` with an item and a callback. Calls `done` when all have
+been processed.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.steed.parallel" id="apidoc.module.steed.parallel">module steed.parallel</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.steed.parallel.parallel" id="apidoc.element.steed.parallel.parallel">
+        function <span class="apidocSignatureSpan">steed.</span>parallel
+        <span class="apidocSignatureSpan">(that, funcs, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parallel(that, funcs, cb) {
+  if (!funcs || typeof funcs === 'function') {
+    cb = funcs
+    funcs = that
+    that = null
+  }
+  if (Array.isArray(funcs)) {
+    _par(that, funcs, null, cb)
+  } else {
+    _handleObjectMap(that, _par, funcs, cb)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Build an instance of steed, this step is not needed but welcomed for
+greater performance. Each steed utility likes being used for the same
+purpose.
+
+-------------------------------------------------------
+&lt;a name="parallel"&gt;&lt;/a&gt;
+### steed.<span class="apidocCodeKeywordSpan">parallel</span>([that,] tasks[, done(err, results)])
+
+Executes a series of tasks in parallel.
+
+`tasks` can either be an array of functions, or an object where each
+property is a function. `done` will be called with the results.
+The `that` argument will set `this` for each task and `done` callback.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.steed.queue" id="apidoc.module.steed.queue">module steed.queue</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.steed.queue.queue" id="apidoc.element.steed.queue.queue">
+        function <span class="apidocSignatureSpan">steed.</span>queue
+        <span class="apidocSignatureSpan">(context, worker, concurrency)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fastqueue(context, worker, concurrency) {
+  if (typeof context === 'function') {
+    concurrency = worker
+    worker = context
+    context = null
+  }
+
+  var cache = reusify(Task)
+  var queueHead = null
+  var queueTail = null
+  var _running = 0
+
+  var self = {
+    push: push,
+    drain: noop,
+    saturated: noop,
+    pause: pause,
+    paused: false,
+    concurrency: concurrency,
+    running: running,
+    resume: resume,
+    idle: idle,
+    length: length,
+    unshift: unshift,
+    empty: noop,
+    kill: kill,
+    killAndDrain: killAndDrain
+  }
+
+  return self
+
+  function running () {
+    return _running
+  }
+
+  function pause () {
+    self.paused = true
+  }
+
+  function length () {
+    var current = queueHead
+    var counter = 0
+
+    while (current) {
+      current = current.next
+      counter++
+    }
+
+    return counter
+  }
+
+  function resume () {
+    if (!self.paused) return
+    self.paused = false
+    for (var i = 0; i &lt; self.concurrency; i++) {
+      _running++
+      release()
+    }
+  }
+
+  function idle () {
+    return _running === 0 &amp;&amp; self.length() === 0
+  }
+
+  function push (value, done) {
+    var current = cache.get()
+
+    current.context = context
+    current.release = release
+    current.value = value
+    current.callback = done || noop
+
+    if (_running === self.concurrency || self.paused) {
+      if (queueTail) {
+        queueTail.next = current
+        queueTail = current
+      } else {
+        queueHead = current
+        queueTail = current
+        self.saturated()
+      }
+    } else {
+      _running++
+      worker.call(context, current.value, current.worked)
+    }
+  }
+
+  function unshift (value, done) {
+    var current = cache.get()
+
+    current.context = context
+    current.release = release
+    current.value = value
+    current.callback = done || noop
+
+    if (_running === self.concurrency || self.paused) {
+      if (queueHead) {
+        current.next = queueHead
+        queueHead = current
+      } else {
+        queueHead = current
+        queueTail = current
+        self.saturated()
+      }
+    } else {
+      _running++
+      worker.call(context, current.value, current.worked)
+    }
+  }
+
+  function release (holder) {
+    if (holder) {
+      cache.release(holder)
+    }
+    var next = queueHead
+    if (next) {
+      if (!self.paused) {
+        if (queueTail === queueHead) {
+          queueTail = null
+        }
+        queueHead = next.next
+        next.next = null
+        worker.call(context, next.value, next.worked)
+        if (queueTail === null) {
+          self.empty()
+        }
+      } else {
+        _running--
+      }
+    } else if (--_running === 0) {
+      self.drain()
+    }
+  }
+
+  function kill () {
+    queueHead = null
+    queueTail = null
+    self.drain = noop
+  }
+
+  function killAndDrain () {
+    queueHead = null
+    queueTail = null
+    self.drain()
+    self.drain = noop
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `fastseries` map: 4032ms
+
+These benchmarks where taken on node v4.2.2, on a MacBook
+Pro Retina Mid 2014 (i7, 16GB of RAM).
+
+-------------------------------------------------------
+&lt;a name="queue"&gt;&lt;/a&gt;
+### steed.<span class="apidocCodeKeywordSpan">queue</span>(worker, concurrency)
+
+Creates a new queue. See [fastq](http://npm.im/fastq) for full API.
+
+Arguments:
+
+* `worker`, worker function, it would be called with `that` as `this`,
+if that is specified.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.steed.series" id="apidoc.module.steed.series">module steed.series</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.steed.series.series" id="apidoc.element.steed.series.series">
+        function <span class="apidocSignatureSpan">steed.</span>series
+        <span class="apidocSignatureSpan">(that, funcs, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function series(that, funcs, cb) {
+  if (!funcs || typeof funcs === 'function') {
+    cb = funcs
+    funcs = that
+    that = null
+  }
+  if (Array.isArray(funcs)) {
+    _ser(that, funcs, null, cb)
+  } else {
+    _handleObjectMap(that, _ser, funcs, cb)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `fastparallel` with results: 2139ms
+
+These benchmarks where taken on node v4.1.0, on a MacBook
+Pro Retina Mid 2014 (i7, 16GB of RAM).
+
+-------------------------------------------------------
+&lt;a name="series"&gt;&lt;/a&gt;
+### steed.<span class="apidocCodeKeywordSpan">series</span>([that,] tasks[, done(err, results)])
+
+Executes a series of tasks in series.
+
+`tasks` can either be an array of functions, or an object where each
+property is a function. `done` will be called with the results.
+The `that` argument will set `this` for each task and `done` callback.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.steed.toString" id="apidoc.module.steed.toString">module steed.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.steed.toString.toString" id="apidoc.element.steed.toString.toString">
+        function <span class="apidocSignatureSpan">steed.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.steed.waterfall" id="apidoc.module.steed.waterfall">module steed.waterfall</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.steed.waterfall.waterfall" id="apidoc.element.steed.waterfall.waterfall">
+        function <span class="apidocSignatureSpan">steed.</span>waterfall
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function fall() {
+  var current = queue.get()
+  current.release = release
+
+  if (arguments.length === 3) {
+    current.context = arguments[0]
+    current.list = arguments[1]
+    current.callback = arguments[2] || noop
+  } else {
+    current.context = context
+    current.list = arguments[0]
+    current.callback = arguments[1] || noop
+  }
+
+  current.work()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* `fastseries` with results: 4096ms
+
+These benchmarks where taken on node v4.2.2, on a MacBook
+Pro Retina Mid 2014 (i7, 16GB of RAM).
+
+-------------------------------------------------------
+&lt;a name="waterfall"&gt;&lt;/a&gt;
+### steed.<span class="apidocCodeKeywordSpan">waterfall</span>(tasks[, done(err, ...)])
+
+Runs the functions in `tasks` in series, each passing their result to
+the next task in the array. Quits early if any of the tasks errors.
+
+Uses [fastfall](http://npm.im/fastfall).
+
+Example:
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
