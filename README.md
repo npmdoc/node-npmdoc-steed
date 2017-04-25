@@ -1,4 +1,7 @@
-# api documentation for  [steed (v1.1.3)](https://github.com/mcollina/steed#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-steed.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-steed) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-steed.svg)](https://travis-ci.org/npmdoc/node-npmdoc-steed)
+# npmdoc-steed
+
+#### basic api documentation for  [steed (v1.1.3)](https://github.com/mcollina/steed#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-steed.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-steed) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-steed.svg)](https://travis-ci.org/npmdoc/node-npmdoc-steed)
+
 #### horsepower for your modules
 
 [![NPM](https://nodei.co/npm/steed.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/steed)
@@ -72,7 +75,8 @@
         "coverage": "istanbul cover tape test.js; cat coverage/lcov.info | coveralls",
         "test": "standard && tape test.js | tap-spec"
     },
-    "version": "1.1.3"
+    "version": "1.1.3",
+    "bin": {}
 }
 ```
 
